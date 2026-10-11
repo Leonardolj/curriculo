@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículo de Leonardo Jaime de Oliveira - Supervisor e Líder Técnico de Refrigeração e Climatização">
+  <title>Currículo | Leonardo Jaime de Oliveira</title>
+
+  <style>
+    :root {
+      --navy: #10243a;
+      --blue: #1769aa;
+      --light-blue: #eaf3fb;
+      --text: #243447;
+      --muted: #5c6b7a;
+      --line: #d9e2ec;
+      --white: #ffffff;
+      --background: #eef2f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding: 30px 15px;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .actions {
+      width: min(900px, 100%);
+      margin: 0 auto 18px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border: none;
+      border-radius: 7px;
+      background: var(--blue);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .button.secondary {
+      background: var(--navy);
+    }
+
+    .resume {
+      width: min(900px, 100%);
+      margin: auto;
+      overflow: hidden;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgba(16, 36, 58, 0.12);
+    }
+
+    header {
+      padding: 38px 44px 30px;
+      color: white;
+      background: linear-gradient(130deg, var(--navy), #174b75);
+      border-bottom: 5px solid var(--blue);
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: clamp(25px, 4vw, 36px);
+      line-height: 1.25;
+      letter-spacing: 0.4px;
+    }
+
+    .headline {
+      margin-bottom: 20px;
+      color: #d9eafa;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      color: #f0f6fc;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: white;
+      overflow-wrap: anywhere;
+    }
+
+    .project {
+      margin-top: 20px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 14px;
+    }
+
+    .project strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .project a {
+      color: #d9eafa;
+      overflow-wrap: anywhere;
+    }
+
+    main {
+      padding: 32px 44px 40px;
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 13px;
+      color: var(--navy);
+      font-size: 17px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    h2::before {
+      content: "";
+      width: 5px;
+      height: 22px;
+      flex-shrink: 0;
+      border-radius: 3px;
+      background: var(--blue);
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    .job-title {
+      margin-bottom: 2px;
+      color: var(--navy);
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .job-meta {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 5px 0;
+      padding-left: 2px;
+    }
+
+    li::marker {
+      color: var(--blue);
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 24px;
+    }
+
+    .skills ul {
+      margin-top: 0;
+    }
+
+    .note {
+      margin-top: 24px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 620px) {
+      body {
+        padding: 12px 8px;
+      }
+
+      header {
+        padding: 28px 22px 24px;
+      }
+
+      main {
+        padding: 25px 22px 30px;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .actions .button {
+        text-align: center;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: white;
+      }
+
+      .actions {
+        display: none !important;
+      }
+
+      .resume {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      h2, li, .project {
+        break-inside: avoid;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="actions">
+    <button class="button" onclick="window.print()">
+      Imprimir / Salvar em PDF
+    </button>
+
+    <a
+      class="button secondary"
+      href="https://leonardolj.github.io/acompanhamento-operacional-AP3.3/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver meu sistema
+    </a>
+  </div>
+
+  <article class="resume">
+
+    <header>
+      <h1>LEONARDO JAIME DE OLIVEIRA</h1>
+
+      <p class="headline">
+        Supervisor e Líder Técnico |
+        Encarregado de Refrigeração e Climatização
+      </p>
+
+      <div class="contact">
+        <span>📍 Nova Iguaçu – RJ</span>
+
+        <span>
+          ☎ <a href="tel:+5521973896303">
+            (21) 97389-6303
+          </a>
+        </span>
+
+        <span>
+          ✉ <a href="mailto:leonardojaimelj.lj@outlook.com">
+            leonardojaimelj.lj@outlook.com
+          </a>
+        </span>
+      </div>
+
+      <div class="project">
+        <strong>
+          Sistema de acompanhamento operacional desenvolvido por mim
+        </strong>
+
+        <a
+          href="https://leonardolj.github.io/acompanhamento-operacional-AP3.3/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Acessar sistema operacional
+        </a>
+      </div>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Objetivo profissional</h2>
+
+        <p>
+          Atuar como Encarregado ou Supervisor de Refrigeração e
+          Climatização, aplicando minha experiência em liderança de
+          equipes, gestão operacional, instalação de sistemas e
+          manutenção preventiva e corretiva, com foco em qualidade,
+          segurança, produtividade e eficiência dos serviços.
+        </p>
+      </section>
+
+      <section>
+        <h2>Resumo profissional</h2>
+
+        <p>
+          Profissional da área de Refrigeração e Climatização, com
+          experiência desde 2022 e atuação como Encarregado na Souza
+          Fernandes Reforma e Construção. Experiência na coordenação
+          de equipes de 14 profissionais, organização de atividades e
+          acompanhamento de instalações e manutenção preventiva e
+          corretiva de sistemas de climatização.
+        </p>
+
+        <p>
+          Conhecimentos complementares em eletrônica, elétrica predial,
+          sistemas Split Inverter, programação, Excel Avançado e Power BI.
+          Destaque para liderança, organização, resolução de problemas
+          operacionais e desenvolvimento de ferramentas digitais para
+          acompanhamento e controle das atividades.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experiência profissional</h2>
+
+        <p class="job-title">
+          Souza Fernandes Reforma e Construção
+        </p>
+
+        <p class="job-meta">
+          Encarregado de Refrigeração e Climatização | 2022 – Atual
+        </p>
+
+        <ul>
+          <li>Coordenação e acompanhamento de equipe composta por 14 profissionais.</li>
+          <li>Organização, distribuição e supervisão das atividades operacionais.</li>
+          <li>Acompanhamento da instalação de sistemas de refrigeração e climatização.</li>
+          <li>Supervisão dos serviços de manutenção preventiva e corretiva.</li>
+          <li>Suporte técnico na identificação e resolução de problemas operacionais.</li>
+          <li>Acompanhamento da qualidade dos serviços, segurança e produtividade da equipe.</li>
+          <li>Organização dos processos de trabalho e acompanhamento da execução das atividades.</li>
+          <li>Desenvolvimento de sistema digital próprio para acompanhamento operacional.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Cursos e qualificações</h2>
+
+        <div class="skills">
+          <ul>
+            <li>Técnico em Eletrônica</li>
+            <li>Mecânico de Ar-Condicionado Split Inverter</li>
+            <li>Eletricista Predial</li>
+          </ul>
+
+          <ul>
+            <li>Programação</li>
+            <li>Excel Avançado</li>
+            <li>Microsoft Word e PowerPoint</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Conhecimentos em informática</h2>
+
+        <ul>
+          <li>Excel Avançado e Power BI</li>
+          <li>Programação e ferramentas digitais para acompanhamento operacional</li>
+          <li>Pacote Microsoft Office e comunicação por e-mail</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Competências profissionais</h2>
+
+        <div class="skills">
+          <ul>
+            <li>Liderança e coordenação de equipes</li>
+            <li>Supervisão de serviços técnicos</li>
+            <li>Organização e planejamento operacional</li>
+            <li>Instalação e manutenção de climatização</li>
+            <li>Manutenção preventiva e corretiva</li>
+          </ul>
+
+          <ul>
+            <li>Conhecimentos em elétrica e eletrônica</li>
+            <li>Qualidade, segurança e produtividade</li>
+            <li>Resolução de problemas técnicos</li>
+            <li>Desenvolvimento de soluções digitais</li>
+            <li>Comprometimento com resultados e melhoria contínua</li>
+          </ul>
+        </div>
+      </section>
+
+      <p class="note">
+        Currículo profissional · Leonardo Jaime de Oliveira
+      </p>
+
+    </main>
+  </article>
+
+</body>
+</html>
